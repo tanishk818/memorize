@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
+  <style>
+      body{
+          background:ghostwhite;
+      }
+      .img-rounded{
+          margin:1px;
+          height:150px;
+          width:200px;
+      }
+       .gallery{
+          top:50%;
+          margin-right: -50%;
+          left:50%;
+          position: absolute;
+          transform: translate(-50%,-50%);
+      }
+      @media only screen and (max-width: 900px){
+      .img-rounded{
+          margin:1px;
+          height:100px;
+          width:100px;
+      }
+      .gallery{
+          top:50%;
+          margin-right: -50%;
+          left:50%;
+          position: absolute;
+          transform: translate(-50%,-50%);
+      }
+      }
+    #text_content{
+  color: black;
+  font-family: Comfortaa, cursive;
+  letter-spacing: 1px;
+  font-size: 21px;
+  text-align: center;
+  float: right;
+  margin-right: 5%;
+}
+#myModal .card-body{
+     font-family: Comfortaa, cursive;
+}  
+@font-face {
+	 font-family: "ubuntu";
+	 font-style: italic;
+	 font-weight: 100;
+	 src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2) format("woff2");
+}
+ 
+ a {
+	 text-decoration: none;
+	 color: #9ca0b1;
+}
+ .wrapper {
+	 text-align: center;
+}
+ .wrapper h1 {
+	 color: #fff;
+	 font-size: 50px;
+	 font-family: "ubuntu";
+	 text-transform: uppercase;
+	 font-weight: 500;
+	 font-family: "Josefin Sans", sans-serif;
+	 background: linear-gradient(to right, #66fcf1 10%, #84ceeb 60%);
+	 background-size: auto auto;
+	 background-clip: border-box;
+	 background-size: 200% auto;
+	 color: #fff;
+	 background-clip: text;
+	 text-fill-color: transparent;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 animation: textclip 1.5s linear infinite;
+	 display: inline-block;
+}
+ @keyframes textclip {
+	 to {
+		 background-position: 200% center;
+	}
+}
+ 
+  </style>
+</head>
+
+<body> 
+    <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                            <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+                 <h4>CONGRATS!<br><span>You nailed it!</span></h4>
+                 <p id="score"></p> 
+      <a class="btn btn-success" href="level_select.html" role="button">Continue</a>       
+                    </div>
+                </div>
+            </div>
+        </div>
+     <div class="wrapper"><h1>MEMORIZE</h1></div>
+    <div id="text_content">Moves : </div>
+    <div class="gallery">
+      
+            <img src="blue.png" class=" img-rounded" onclick="myFunction(0)">
+            <img src="blue.png" class="img-rounded" onclick="myFunction(1)"><br>
+            <img src="blue.png" class="img-rounded" onclick="myFunction(2)">
+            <img  src="blue.png" class=" img-rounded" onclick="myFunction(3)"><br>
+       
+       
+            <img src="blue.png" class=" img-rounded" onclick="myFunction(4)">
+            <img src="blue.png" class="img-rounded" onclick="myFunction(5)"><br>
+           <img src="blue.png" class="img-rounded" onclick="myFunction(6)">
+            <img  src="blue.png" class=" img-rounded" onclick="myFunction(7)">
+        
+    </div>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+
+var clr=["emoji_mask.jpg","emoji_smiely.jpg","emoji_salute.jfif","emoji_tear.jfif","emoji_mask.jpg","emoji_smiely.jpg","emoji_salute.jfif","emoji_tear.jfif"];
+var match=[];
+    var x=0;
+    var y=11;
+    /*for(var i=0;i<6;i++){
+ /*  var r = Math.floor((Math.random() * 256) + 0);
+
+   var g = Math.floor((Math.random() * 256) + 0);
+  
+    var b = Math.floor((Math.random() * 256) + 0);
+   
+    clr[x++]="rgb(" + r +"," + g +"," + b + ")";
+    clr[y--]="rgb(" + r +"," + g +"," + b + ")";
+    }*/
+    clr.sort(() => Math.random() - 0.5);
+var count=0;
+var mv=0;
+function myFunction(e){
+  mv++;
+document.getElementById("text_content").innerHTML = "Moves : "+mv;
+document.getElementById("score").innerHTML = "Moves : "+mv;
+var clicked=document.getElementsByClassName("img-rounded");
+match.push(e);
+clicked[e].src=clr[e];
+setTimeout(function(){ if(match.length==2){
+if(match[0]!==match[1]){
+if(clr[match[0]]!==clr[match[1]]){
+
+        clicked[match[0]].src="blue.png";
+clicked[match[1]].src="blue.png";
+   
+
+match=[]
+}
+else{
+match=[];
+count=count + +2;
+if(count===8){  $('#myModal').modal('show');}
+}}
+} }, 1500);
+
+}
+</script>
+</body>
+
+</html>
