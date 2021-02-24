@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Easy-Color</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/mem.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="content">
+             <!-- Modal content-->
+             <div class="modal-content">
+                 <div class="modal-body text-center">
+                         <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+                         <h4>CONGRATS!<br><span>You nailed it!</span></h4>
+                         <p id="score"></p> 
+                         <a class="btn btn-success" href="level_select.html" role="button">Continue</a>       
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="wrapper"><a href="index.html"><h1>MEMORIZE</h1></a></div>
+    <div id="text_content">Moves : </div>
+    
+    <div class="gallery">
+                <div class="container">
+                    <div class="card_div card" onclick="flip(0)">
+                    <div class="card_div front">
+                    </div>
+                    <div class="card_div back">
+                    </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card_div card" onclick="flip(1)">
+                      <div class="card_div front">
+                      </div>
+                      <div class="card_div back">
+                      </div>
+                    </div>
+                </div><br>
+                <div class="container">
+                    <div class="card_div card" onclick="flip(2)">
+                    <div class="card_div front">
+                    </div>
+                    <div class="card_div back">
+                    </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card_div card" onclick="flip(3)">
+                      <div class="card_div front">
+                      </div>
+                      <div class="card_div back">
+                      </div>
+                    </div>
+                </div>
+    </div>
+<script>var clr=["./assets/img/color1.jpg","./assets/img/color2.jpg","./assets/img/color1.jpg","./assets/img/color2.jpg"];</script>
+<script type="text/javascript" src="./assets/js/backend.js"></script>
+</body>
+
+</html>
